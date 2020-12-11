@@ -30,8 +30,29 @@ const quiz = [
     }
 ]
 
+console.log(quiz[0].question);
+
+// 何度も出てくるものは変数, 定数に入れてしまう
+// HTMLのオブジェクトをとってくる場合、変数/定数名の頭に$をつける
+const $question = document.getElementById('js-question');
+const $button = document.getElementsByTagName('button');
+const buttonLength = $button.length;
+
+
 // 簡易フローチャート
     // 一問目のクイズをセットアップする
+    const setUpQuiz = () => {
+        // 質問文を定義
+        $question.textContent = quiz[0].question;
+
+        let buttonIndex = 0;
+        while(buttonIndex < buttonLength){
+            $button[buttonIndex].textContent = quiz[0].answers[buttonIndex];
+            buttonIndex++;
+        }
+    }
+    setUpQuiz();
+
     // 一問目のクイズに答える
         // 不正解 → アラートで不正解とする
         // 正解 → 次へ
@@ -43,21 +64,9 @@ const quiz = [
         // 正解 → 点数と戻るボタンを表示する
     // 戻るボタンを押すと一問目のクイズの画面に戻る
 
-// 何度も出てくるものは変数, 定数に入れてしまう
-// HTMLのオブジェクトをとってくる場合、変数/定数名の頭に$をつける
-const $button = document.getElementsByTagName('button');
-const buttonLength = $button.length;
+
 
 // クイズの問題文、選択肢を定義
-const setUpQuiz = () => {
-    document.getElementById('js-question').textContent = question;
-    let buttonIndex = 0;
-    while(buttonIndex < buttonLength){
-        $button[buttonIndex].textContent = answers[buttonIndex];
-        buttonIndex++;
-    }
-}
-setUpQuiz();
 
 // 正誤判定する関数を定義
 const judgeAnswer = (e) => {
