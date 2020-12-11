@@ -38,6 +38,14 @@ const $question = document.getElementById('js-question');
 const $button = document.getElementsByTagName('button');
 const buttonLength = $button.length;
 
+// 正誤判定する関数を定義
+const judgeAnswer = (e) => {
+    if(e.target.textContent === correct){
+        window.alert('正解です');        
+    } else {
+        window.alert('間違っています');
+    };
+}
 
 // 簡易フローチャート
     // 一問目のクイズをセットアップする
@@ -64,15 +72,6 @@ const buttonLength = $button.length;
         // 正解 → 点数と戻るボタンを表示する
     // 戻るボタンを押すと一問目のクイズの画面に戻る
 
-
-// 正誤判定する関数を定義
-const judgeAnswer = (e) => {
-        if(e.target.textContent === correct){
-            window.alert('正解です');        
-        } else {
-            window.alert('間違っています');
-        };
-    }
 
 // ボタンをクリックしたら正誤判定
 let judgeAnswerIndex = 0;
