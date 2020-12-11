@@ -83,5 +83,3 @@ while(judgeAnswerIndex < buttonLength){
     });
     judgeAnswerIndex++;
 }
-
-console.log($button);
