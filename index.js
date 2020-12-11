@@ -23,12 +23,28 @@ const setUpQuiz = () => {
 }
 setUpQuiz();
 
+// 正誤判定する関数を
+const judgeAnswer = (e) => {
+        if(e.target.textContent === correct){
+            window.alert('正解です');        
+        } else {
+            window.alert('間違っています');
+        };
+    }
 
 // ボタンをクリックしたら正誤判定
-$button[0].addEventListener('click', () => {
-    if($button[0].textContent === correct){
-        alert('正解です');        
-    } else {
-        alert('間違っています');
-    };
+$button[0].addEventListener('click', (e) => {
+    judgeAnswer(e);
+});
+
+$button[1].addEventListener('click', (e) => {
+    judgeAnswer(e);
+});
+
+$button[2].addEventListener('click', (e) => {
+    judgeAnswer(e);
+});
+
+$button[3].addEventListener('click', (e) => {
+    judgeAnswer(e);
 });
