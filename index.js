@@ -40,7 +40,7 @@ const buttonLength = $button.length;
 
 // 正誤判定する関数を定義
 const judgeAnswer = (e) => {
-    if(e.target.textContent === correct){
+    if(correct === e.target.textContent){
         window.alert('正解です');        
     } else {
         window.alert('間違っています');
