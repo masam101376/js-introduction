@@ -70,7 +70,7 @@ const clickHandler = (e) => {
         setUpQuiz();
     } else {
         // 問題数がもうなければこちらを実行
-        window.alert('終了！');
+        window.alert('終了！あなたの正解数は' + score + '/' + quizLength + 'です。');
         window.alert(score);
     }
     console.log(score);
