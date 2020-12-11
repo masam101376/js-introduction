@@ -39,12 +39,14 @@ const $button = document.getElementsByTagName('button');
 const buttonLength = $button.length;
 
 // 正誤判定する関数を定義
+let score = 0;
 const judgeAnswer = (e) => {
     if(quiz[0].correct === e.target.textContent){
-        window.alert('正解です');        
+        score += 1;        
     } else {
-        window.alert('間違っています');
-    };
+        score += 0
+    }
+    console.log(score);
 }
 
 // 簡易フローチャート
