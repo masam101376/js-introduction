@@ -16,7 +16,7 @@ document.getElementsByTagName('button')[3].textContent = answers[3];
 
 // ボタンをクリックしたら正誤判定
 document.getElementsByTagName('button')[0].addEventListener('click', () => {
-    if(document.getElementsByTagName('button')[0].textContent == correct){
+    if(document.getElementsByTagName('button')[0].textContent === correct){
         alert('正解です');        
     } else {
         alert('間違っています');
