@@ -65,9 +65,6 @@ const buttonLength = $button.length;
     // 戻るボタンを押すと一問目のクイズの画面に戻る
 
 
-
-// クイズの問題文、選択肢を定義
-
 // 正誤判定する関数を定義
 const judgeAnswer = (e) => {
         if(e.target.textContent === correct){
