@@ -37,9 +37,9 @@ console.log(quiz[0].question);
 const $question = document.getElementById('js-question');
 const $button = document.getElementsByTagName('button');
 const buttonLength = $button.length;
+let score = 0;
 
 // 正誤判定する関数を定義
-let score = 0;
 const judgeAnswer = (e) => {
     if(quiz[0].correct === e.target.textContent){
         score += 1;        
