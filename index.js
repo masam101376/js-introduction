@@ -29,7 +29,7 @@ const judge(arg) => {
 
 // ボタンをクリックしたら正誤判定
 document.getElementsByTagName('button')[0].addEventListener('click', () => {
-    if(document.getElementsByTagName('button')[0].textContent === correct){
+    if(button[0].textContent === correct){
         alert('正解です');        
     } else {
         alert('間違っています');
