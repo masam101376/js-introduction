@@ -7,16 +7,22 @@ const answers = [
 ];
 const correct = 'ニンテンドーDS';
 
-document.getElementById('js-question').textContent = question;
-
-// 難度も出てくるものは変数, 定数に入れてしまう
+// 何度も出てくるものは変数, 定数に入れてしまう
 // HTMLのオブジェクトをとってくる場合、変数/定数名の頭に$をつける
 const $button = document.getElementsByTagName('button');
 
-$button[0].textContent = answers[0];
-$button[1].textContent = answers[1];
-$button[2].textContent = answers[2];
-$button[3].textContent = answers[3];
+// クイズの問題文、選択肢を定義
+const setUpQuiz = () => {
+    document.getElementById('js-question').textContent = question;
+    let buttonIndex = 0;
+    let buttonLength = $button.length;
+    while(buttonIndex < buttonLength){
+        $button[buttonIndex].textContent = answers[buttonIndex];
+        buttonIndex++;
+    }
+}
+setUpQuiz();
+
 
 //正誤判定をするための関数
 /*
